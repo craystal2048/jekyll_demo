@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <link rel="stylesheet" href="css.css"/>
+    <script>
+        $(function() {
+            $("#fullPage").fullpage({
+                "afterLoad": function (anchorLink, index) {
+//                    alert("hhhh")
+                    // console.log( $(".section:eq("+index-1+")"));
+//                    $(".section").eq(index-1).addClass("animting");
+                    $(".section").removeClass("anmiting")
+                    setTimeout(function () {
+                        ($(".section").eq(index - 1).addClass("anmiting"), 50);
+                    }, 50)
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="fullPage">
+    <div class="section section1">
+        <div class="logo"><img src="images/logo.png" alt=""/></div>
+        <div class="text">
+            <img src="images/text_1.png" alt=""/>
+            <img src="images/text_2.png" alt=""/>
+            <img src="images/text_3.png" alt=""/>
+            <img src="images/text_4.png" alt=""/>
+            <img src="images/text_5.png" alt=""/>
+            <img src="images/text_6.png" alt=""/>
+            <img src="images/text_7.png" alt=""/>
+            <img src="images/text_8.png" alt=""/>
+        </div>
+        <div class="info"><img src="images/info_1.png" alt=""/></div>
+    </div>
+    <div class="section section2">
+        <div class="shield">
+            <img src="images/shield_1.png" alt=""/>
+            <img src="images/shield_2.png" alt=""/>
+            <img src="images/shield_3.png" alt=""/>
+            <img src="images/shield_4.png" alt=""/>
+            <img src="images/shield_5.png" alt=""/>
+            <img src="images/shield_6.png" alt=""/>
+            <img src="images/shield_7.png" alt=""/>
+            <img src="images/shield_8.png" alt=""/>
+            <img src="images/shield_9.png" alt=""/>
+        </div>
+        <div class="info">
+            <img src="images/info_2.png" alt=""/>
+        </div>
+    </div>
+    <div class="section section3">
+        <div class="info"><img src="images/info_3.png" alt=""/></div>
+        <div class="circle"><img src="images/circle.png" alt=""/></div>
+        <div class="rocket"><img src="images/rocket.png" alt=""/></div>
+    </div>
+    <div class="section section4">
+        <div class="search">
+            <div class="txt"></div>
+            <div class="key"></div>
+            <div class="result"></div>
+        </div>
+        <div class="info"></div>
+    </div>
+    <div class="section section5">
+        <div class="info"></div>
+        <div class="brower">
+            <div class="top"></div>
+            <div class="right"></div>
+            <div class="bottom"></div>
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="toobar"></div>
+            <div class="extra"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
